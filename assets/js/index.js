@@ -35,14 +35,26 @@ $(document).ready(function(){
     var scroll_pos = 0;
     var jumbotronHeight = $(".jumbotron").outerHeight();
     var navbarHeight = $(".navbar").height();
+    var colorChanged = false;
     $(document).scroll(function() {
         scroll_pos = $(this).scrollTop();
         if(scroll_pos > jumbotronHeight - navbarHeight) {
-            $(".navbar").animate({
-                backgroundColor : '#42475B'
-            });
+            if (!colorChanged) {
+                $(".navbar").animate({
+                    backgroundColor : "#545454",
+                    color : "#545454"
+                }, 700);
+
+                colorChanged = true;
+            }
         } else {
-            $(".navbar").css('background-color', 'transparent');
+            if (colorChanged) {
+                $(".navbar").animate({
+                    backgroundColor : "transparent",
+                    color : "#545454"
+                }, 700);
+                colorChanged = false;
+            }
         }
     });
 })
