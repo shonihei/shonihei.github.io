@@ -30,5 +30,19 @@ $(document).ready(function(){
         $('html,body').animate({
             scrollTop: $("#contact").offset().top},
             900);
-        });
-    })
+    });
+
+    var scroll_pos = 0;
+    var jumbotronHeight = $(".jumbotron").outerHeight();
+    var navbarHeight = $(".navbar").height();
+    $(document).scroll(function() {
+        scroll_pos = $(this).scrollTop();
+        if(scroll_pos > jumbotronHeight - navbarHeight) {
+            $(".navbar").animate({
+                backgroundColor : '#42475B'
+            });
+        } else {
+            $(".navbar").css('background-color', 'transparent');
+        }
+    });
+})

@@ -1,16 +1,80 @@
+@font-face {
+    font-family: Ikaros-Regular;
+    src: url('../fonts/Ikaros Sans/Ikaros-Regular.otf');
+}
+
+@font-face {
+    font-family: Ikaros-Light;
+    src: url('../fonts/Ikaros Sans/Ikaros-Light.otf');
+}
+
+@font-face {
+    font-family: Handletter;
+    src: url('../fonts/Handletter.otf');
+}
+
+.navtitle {
+    font-family: Handletter;
+    font-size: 3em;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: rgba(255, 0, 0, 0);
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #FBFBFB !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #42475B !important;
+    background-color: #FBFBFB !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #42475B !important;
+}
+
+.extra-margin {
+    margin-bottom: 30px;
+}
+
+.title {
+    font-family: Ikaros-Regular;
+    margin-bottom: 0px;
+}
+
+.subtitle {
+    position: relative;
+    top: -15px;
+    font-family: Ikaros-Light;
+}
+
 .jumbotron {
-  background-color: #FFAC39;
-  color: #ffffff;
-  padding: 100px 25px;
-  margin-bottom: 0px;
+    background-image: url(../images/jumbotron2.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right 0px bottom 110px;
+    color: #FCFAFB;
+    padding: 100px 25px;
+    margin-bottom: 0px;
 }
 
 .container-fluid {
-  padding: 60px 50px;
+    padding: 60px 50px;
 }
 
 .bg-grey {
-  background-color: #f6f6f6;
+    background-color: #f6f6f6;
 }
 
 .logo {
@@ -27,13 +91,13 @@
 }
 
 .btn-custom {
-  background-color: transparent;
-  /*border: 0px;
-  border-color: transparent;*/
-  padding: 4px;
+    background-color: transparent;
+    /*border: 0px;
+    border-color: transparent;*/
+    padding: 4px;
 }
 
 .btn-custom h3{
-  margin: 0px;
-  margin-bottom: 4px;
+    margin: 0px;
+    margin-bottom: 4px;
 }
