@@ -1,1 +1,107 @@
-<form action="http://formspree.io/shonihei@gmail.com" method="POST"><input type="email" name="_replyto"><textarea   name="body"></textarea><input type="submit" value="Send"></form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hi I'm Sho</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/94986efb03.js"></script>
+  <script src="./assets/js/index.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Hi I'm Sho.</h1>
+  <p>We specialize in blablabla</p>
+</div>
+
+<div class="container-fluid text-center">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Who Am I?</h1>
+    </div>
+  </div>
+  <div class="row">
+    <p>
+      I am a humble student from Japan studying Computer Science and Business Administration!<br />
+      I've built softwares that help college students make their academic schedule.
+    </p>
+    <button class="btn btn-default btn-lg">Say Hello!</button>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey text-center">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>What Do I Do?</h1>
+      <h3>
+        Here are some
+        <button type="button" class="btn btn-default btn-custom" onclick="openInNewTab('https://github.com/shonihei');">
+          <h3>
+            projects
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </h3>
+        </button>
+        I've worked on!
+      </h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-calendar logo"></span>
+    </div>
+    <div class="col-sm-8">
+      <h4>Class Optimizer</h4>
+      <p>
+        Traditionally, students at my school resorted to trial-and-error when it
+        came down to selecting classes and sections that do not collide with eachother.
+        This often led to frustration as students were forced to either give up their
+        much needed rest to attend an "8am" class or give up their extra-curricular
+        commitments in order to attend class.
+        <br /><br />
+        This software I wrote in C# is a solution to this issue. Students can list
+        out all the classes they wish to take, blacklist certain hours for rest
+        or for extracurricular activities and the software does the rest!
+      </p>
+      <button class="btn btn-default" onclick="openInNewTab('https://github.com/shonihei/class-optimizer');">
+          Learn More!
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid text-center">
+    <h2 class="text-center">Where Am I?</h2>
+    <div class="row">
+      <div class="col-sm-5">
+        <p>Let's Talk Code!</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span> Boston, US</p>
+        <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+      </div>
+      <div class="col-sm-7">
+        <div class="row">
+            <form action="http://formspree.io/shonihei@gmail.com" method="POST">
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="name" name="sender_name" placeholder="Name" type="text" required>
+              </div>
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="email" name="sender_address" placeholder="Email" type="email" required>
+              </div>
+            </div>
+            <textarea class="form-control" id="comments" name="body" placeholder="Message" rows="5"></textarea><br>
+            <div class="row">
+              <div class="col-sm-12 form-group">
+                <button class="btn btn-default pull-right" type="submit">Send</button>
+              </div>
+            </div>
+        </form>
+      </div>
+    </div>
+</div>
+
+</body>
+</html>
