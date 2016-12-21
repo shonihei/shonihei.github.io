@@ -1,0 +1,39 @@
+.jumbotron {
+  background-color: #FFAC39;
+  color: #ffffff;
+  padding: 100px 25px;
+  margin-bottom: 0px;
+}
+
+.container-fluid {
+  padding: 60px 50px;
+}
+
+.bg-grey {
+  background-color: #f6f6f6;
+}
+
+.logo {
+    font-size: 150px;
+    min-height:  243px;
+    line-height: 243px;
+}
+
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+}
+
+.btn-custom {
+  background-color: transparent;
+  /*border: 0px;
+  border-color: transparent;*/
+  padding: 4px;
+}
+
+.btn-custom h3{
+  margin: 0px;
+  margin-bottom: 4px;
+}
