@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/94986efb03.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Palanquin" rel="stylesheet">
     <script src="./assets/js/jquery.color-2.1.2.min.js"></script>
     <script src="./assets/js/index.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -35,7 +36,7 @@
 
     <div class="jumbotron text-center">
         <h1 class="title">Hi. I'm Sho.</h1>
-        <p class="subtitle">I like to code.</p>
+        <p class="subtitle">And I like to code.</p>
     </div>
 
     <div id="about" class="container-fluid text-center">
@@ -56,7 +57,7 @@
     <div id="projects" class="container-fluid bg-grey text-center">
         <div class="row">
             <div class="col-sm-12">
-                <h1 class="subtitle">What Do I Do?</h1>
+                <h1>What Do I Do?</h1>
                 <h3>
                     Here are some
                     <button type="button" class="btn btn-default btn-custom" onclick="openInNewTab('https://github.com/shonihei');">
@@ -69,28 +70,60 @@
                 </h3>
             </div>
         </div>
+        <hr />
         <div class="row">
-            <div class="col-sm-4">
-                <span class="glyphicon glyphicon-calendar logo"></span>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="./assets/images/Class Optimizer/Screen3.PNG" alt="Screenshot of the program">
+                    <div class="caption">
+                        <h3>Class Optimizer</h3>
+                        <p>
+                            Traditionally, students at my school resorted to trial-and-error when it
+                            came down to selecting classes and sections that do not collide with eachother.
+                            This often led to frustration as students were forced to either give up their
+                            much needed rest to attend an "8am" class or give up their extra-curricular
+                            commitments in order to attend class.
+                            <br /><br />
+                            This software I wrote in C# is a solution to this issue. Students can list
+                            out all the classes they wish to take, blacklist certain hours for rest
+                            or for extracurricular activities and the software does the rest!
+                        </p>
+                        <p>
+                            <button class="btn btn-default" onclick="openInNewTab('https://github.com/shonihei/class-optimizer');">
+                                Learn More!
+                            </button>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-8">
-                <h4>Class Optimizer</h4>
-                <p>
-                    Traditionally, students at my school resorted to trial-and-error when it
-                    came down to selecting classes and sections that do not collide with eachother.
-                    This often led to frustration as students were forced to either give up their
-                    much needed rest to attend an "8am" class or give up their extra-curricular
-                    commitments in order to attend class.
-                    <br /><br />
-                    This software I wrote in C# is a solution to this issue. Students can list
-                    out all the classes they wish to take, blacklist certain hours for rest
-                    or for extracurricular activities and the software does the rest!
-                </p>
-                <button class="btn btn-default" onclick="openInNewTab('https://github.com/shonihei/class-optimizer');">
-                    Learn More!
-                </button>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="./assets/images/Pretty-Automaton/Rule73.jpg" alt="Sample Image">
+                    <div class="caption">
+                        <h3>Pretty Automaton</h3>
+                        <p>
+                            Python implementation of
+                            <a onclick="openInNewTab('http://mathworld.wolfram.com/ElementaryCellularAutomaton.html')">
+                                Elementary Cellular Automaton
+                            </a>
+                            that allows the user to
+                            set custom colors and rule number to generate a pretty image.
+                            <br /><br />
+                            For simplicity, two states (on and off) are often represented using two easy-
+                            to-dintingusih colors but this implementation allows the user to list
+                            several closely related colors to represent a state from which the script chooses
+                            a color at random.
+                        </p>
+                        <p>
+                            <button class="btn btn-default" onclick="openInNewTab('https://github.com/shonihei/class-optimizer');">
+                                Learn More!
+                            </button>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
 
     <div id="contact" class="container-fluid text-center">

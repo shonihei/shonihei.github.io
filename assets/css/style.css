@@ -13,6 +13,10 @@
     src: url('../fonts/Handletter.otf');
 }
 
+body {
+    font-family: 'Palanquin', sans-serif;
+}
+
 .navtitle {
     font-family: Handletter;
     font-size: 3.5em;
@@ -65,7 +69,7 @@
     background-size: cover;
     background-position: right 0px bottom 110px;
     color: #FCFAFB;
-    padding: 100px 25px;
+    padding: 150px 25px;
     margin-bottom: 0px;
 }
 
@@ -92,12 +96,10 @@
 
 .btn-custom {
     background-color: transparent;
-    /*border: 0px;
-    border-color: transparent;*/
     padding: 4px;
 }
 
 .btn-custom h3{
     margin: 0px;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
 }
