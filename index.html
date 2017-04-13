@@ -1,3 +1,4 @@
+<!-- Not Powered by WordPress :) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,35 +49,32 @@
         <div class="row">
             <p>
                 I am a humble student from Japan studying Computer Science and Business Administration!<br />
-                I've built softwares that help college students make their academic schedule.
+                I'm a proud member of an app incubator on campus called
+                <a class="outgoing-link" target="_blank" href="http://openwebbu.org/">Open Web</a> where I work with
+                other members to develop groundbreaking applications.
             </p>
-            <button id="contact-btn" class="btn btn-default btn-lg">Say Hello!</button>
+            <button class="learnmore" onclick="openInNewTab('https://github.com/shonihei/class-optimizer');">
+                Say Hello!
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
         </div>
     </div>
 
     <div id="projects" class="container-fluid bg-grey text-center">
         <div class="row">
-            <div class="col-sm-12">
-                <h1>What Do I Do?</h1>
-                <h3>
-                    Here are some
-                    <button type="button" class="btn btn-default btn-custom" onclick="openInNewTab('https://github.com/shonihei');">
-                        <h3>
-                            projects
-                            <i class="fa fa-github" aria-hidden="true"></i>
-                        </h3>
-                    </button>
-                    I've worked on!
-                </h3>
+            <div class="col-sm-12 project-title">
+                <h1 class="subtitle" >What Do I Do?</h1>
+                <h5>
+                    Here are some projects I've worked on!
+                </h5>
             </div>
         </div>
-        <hr />
         <div class="row">
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <img src="./assets/images/Class Optimizer/Screen3.PNG" alt="Screenshot of the program">
+                    <img class="screenshot" src="./assets/images/Class Optimizer/interface.png" alt="Screenshot of the program">
                     <div class="caption">
-                        <h3>Class Optimizer</h3>
+                        <h3>Antzer</h3>
                         <p>
                             Traditionally, students at my school resorted to trial-and-error when it
                             came down to selecting classes and sections that do not collide with eachother.
@@ -84,13 +82,14 @@
                             much needed rest to attend an "8am" class or give up their extra-curricular
                             commitments in order to attend class.
                             <br /><br />
-                            This software I wrote in C# is a solution to this issue. Students can list
+                            This web application is a solution to this issue. Students can list
                             out all the classes they wish to take, blacklist certain hours for rest
                             or for extracurricular activities and the software does the rest!
                         </p>
                         <p>
-                            <button class="btn btn-default" onclick="openInNewTab('https://github.com/shonihei/class-optimizer');">
+                            <button class="learnmore" onclick="openInNewTab('https://github.com/shonihei/class-optimizer');">
                                 Learn More!
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
                             </button>
                         </p>
                     </div>
@@ -98,7 +97,7 @@
             </div>
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <img src="./assets/images/Pretty-Automaton/Rule73.jpg" alt="Sample Image">
+                    <img class="screenshot" src="./assets/images/Pretty-Automaton/Rule73.jpg" alt="Sample Image">
                     <div class="caption">
                         <h3>Pretty Automaton</h3>
                         <p>
@@ -115,8 +114,32 @@
                             a color at random.
                         </p>
                         <p>
-                            <button class="btn btn-default" onclick="openInNewTab('https://github.com/shonihei/pretty-automaton');">
+                            <button class="learnmore" onclick="openInNewTab('https://github.com/shonihei/pretty-automaton');">
                                 Learn More!
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img class="screenshot" src="./assets/images/buscraper/buscraper.png" alt="Screenshot of the program">
+                    <div class="caption">
+                        <h3>BUScraper</h3>
+                        <p>
+                            This is a Node.js webscraping module made to extract class/section information.
+                            It utilizes the popular async package to make HTTP GET calls asynchronously.
+                            The school website is structured such that the query result of some class is paginated if all the sections in a class does
+                            not fit in a single page. So I used asynchronous programming to simultaneously parse and request additional data.
+                            <br /><br />
+                            The module is publicly available on npm.js/buscraper and you can check out my github repository to see how
+                            I implemented the module and recommend any fixes.
+                        </p>
+                        <p>
+                            <button class="learnmore" onclick="openInNewTab('https://github.com/shonihei/class-optimizer');">
+                                Learn More!
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
                             </button>
                         </p>
                     </div>
@@ -134,11 +157,11 @@
                 <p><span class="glyphicon glyphicon-map-marker"></span> Boston, US</p>
                 <p><span class="glyphicon glyphicon-envelope"></span> shonihei@gmail.com</p>
                 <p>
-                    <a class="btn" target="_blank" href="https://www.linkedin.com/in/sho-nihei-936158b2">
-                        <i class="fa fa-2x fa-linkedin-square" aria-hidden="true"></i>
+                    <a class="btn social-stuff" target="_blank" href="https://www.linkedin.com/in/sho-nihei-936158b2">
+                        <i id="linkedin" class="fa fa-2x fa-linkedin-square" aria-hidden="true"></i>
                     </a>
-                    <a class="btn" target="_blank" href="https://github.com/shonihei">
-                        <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+                    <a class="btn social-stuff" target="_blank" href="https://github.com/shonihei">
+                        <i id="github" class="fa fa-2x fa-github" aria-hidden="true"></i>
                     </a>
                 </p>
             </div>
@@ -165,7 +188,7 @@
 
     <footer class="container-fluid text-center">
         <a href="#myPage" title="To Top">
-            <span class="glyphicon glyphicon-chevron-up"></span>
+            <span id="up" class="glyphicon glyphicon-chevron-up"></span>
         </a>
     </footer>
 

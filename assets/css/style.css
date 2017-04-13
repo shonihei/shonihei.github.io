@@ -14,7 +14,12 @@
 }
 
 body {
-    font-family: 'Palanquin', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+}
+
+.project-title {
+  margin-bottom: 20px;
 }
 
 .navtitle {
@@ -45,6 +50,10 @@ body {
 .navbar-default .navbar-toggle {
     border-color: transparent;
     color: #42475B !important;
+}
+
+#contact-btn {
+  border-radius: 2px;
 }
 
 .extra-margin {
@@ -78,7 +87,7 @@ body {
 }
 
 .bg-grey {
-    background-color: #f6f6f6;
+    background-color: #f7f7f7;
 }
 
 .logo {
@@ -87,11 +96,35 @@ body {
     line-height: 243px;
 }
 
+.outgoing-link {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
     .col-sm-4 {
         text-align: center;
         margin: 25px 0;
     }
+}
+
+#up {
+  color: black;
+}
+
+#linkedin {
+  color: black;
+}
+
+#github {
+  color: black;
+}
+
+.social-stuff {
+  transition: 0.2s ease-in-out;
+}
+
+.social-stuff:hover {
+  color: orange;
 }
 
 .btn-custom {
@@ -102,4 +135,48 @@ body {
 .btn-custom h3{
     margin: 0px;
     margin-bottom: 8px;
+}
+
+.screenshot {
+  width: 100%;
+  max-height: 200px;
+  background-size: stretch;
+  overflow: hidden;
+}
+
+#buscraper {
+  background-image: url("../images/buscraper/buscraper.png" );
+}
+
+.learnmore {
+  border: 0;
+  border-radius: 0;
+  background-color: white;
+  padding: 10px 25px;
+  margin-top: 10px;
+  font-weight: 200;
+  outline: none;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  transition: all ease-in-out 300ms;
+}
+
+.learnmore i {
+  position: relative;
+  left: 3px;
+  transition: .3s cubic-bezier(0.42, 0, 0, 1.01);
+}
+
+.learnmore:hover > i {
+  left: 8px;
+}
+
+.thumbnail {
+  padding: 10px;
+  border-radius: 0;
+  transition: 0.3s ease-in-out;
+  min-height: 600px;
+}
+
+.thumbnail:hover {
+  box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px;
 }
