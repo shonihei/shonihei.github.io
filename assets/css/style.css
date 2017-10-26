@@ -1,0 +1,33 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    position: relative;
+}
+
+.hero {
+    height: 350px;
+    width: 100%;
+    background-color: #ED7260;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%);
+    padding-top: 10px;
+}
+
+.projects {
+    height: 100%;
+    width: 100%;
+}
+
+.row {
+    width: auto;
+}
+
+.project {
+    display: inline-block;
+    width: 150px;
+    height: 75;
+    background-color: white;
+    margin: 0 5px;
+}
