@@ -1,60 +1,48 @@
-function openInNewTab(url) {
-    var win = window.open(url, '_blank');
-    win.focus();
+$(document).ready(function() {
+	var keyframes = createKeyframeAnimation();
+	var style = document.createElement('style');
+	style.type = 'text/css';
+	style.innerHTML = keyframes
+	document.getElementsByTagName('head')[0].appendChild(style);
+	
+	$('.chunk').on('animationend', function(e) {
+		if (e.originalEvent.animationName === "pop") {
+			$(this).addClass('pulsate');
+		}
+	});
+});
+
+function createKeyframeAnimation () {
+	var x = y = 0;
+	var animation = '';
+	var inverseAnimation = '';
+	
+	for (var step = 0; step <= 100; step++) {
+		var easedStep = exponential(step / 100);
+		const xScale = x + (1 - x) * easedStep;
+		
+		animation += `${step}% {
+			transform: scaleX(${xScale});
+		}`;
+		const invXScale = 1 / xScale;
+		inverseAnimation += `${step}% {
+			transform: scaleX(${invXScale});
+		}`;
+	}
+	
+	return `
+	@keyframes activityAnimation {
+		${animation}
+	}
+	
+	@keyframes activityContentsAnimation {
+		${inverseAnimation}
+	}`;
 }
 
-$(document).ready(function(){
-    // Add smooth scrolling to all links in navbar + footer link
-    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-        if (this.hash !== "") {
-            // Make sure this.hash has a value before overriding default behavior
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 900, function(){
-
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-            });
-        } // End if
-    });
-
-    $("#contact-btn").click(function() {
-        $('html,body').animate({
-            scrollTop: $("#contact").offset().top},
-            900);
-    });
-
-    var scroll_pos = 0;
-    var jumbotronHeight = $(".jumbotron").outerHeight();
-    var navbarHeight = $(".navbar").height();
-    var colorChanged = false;
-    $(document).scroll(function() {
-        scroll_pos = $(this).scrollTop();
-        if(scroll_pos > jumbotronHeight - navbarHeight) {
-            if (!colorChanged) {
-                $(".navbar").animate({
-                    backgroundColor : "#545454",
-                    color : "#545454"
-                }, 700);
-
-                colorChanged = true;
-            }
-        } else {
-            if (colorChanged) {
-                $(".navbar").animate({
-                    backgroundColor : "transparent",
-                    color : "#545454"
-                }, 700);
-                colorChanged = false;
-            }
-        }
-    });
-})
+function exponential(k) {        
+	if (k === 0) return 0;
+	if (k === 1) return 1;
+	if ((k *= 2) < 1) return 0.5 * Math.pow(1024, k - 1);
+	return 0.5 * (- Math.pow(2, - 10 * (k - 1)) + 2);
+}
