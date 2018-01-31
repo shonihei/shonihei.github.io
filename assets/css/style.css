@@ -9,14 +9,6 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
-#stripe {
-    height: 100vh;
-    width: 250px;
-    position: absolute;
-    left: 150px;
-    background-color: #ED7260;
-}
-
 #nav {
     height: 60px;
     width: 100%;
@@ -42,4 +34,117 @@ body {
 
 .link:hover {
     color: var(--font-primary);
+}
+
+#projects {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.thumbnail {
+    margin: 60px 0;
+    box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.3);
+}
+
+.dummy {
+    height: 315px;
+    width: 421px;
+    background-color:rgb(180, 180, 180);
+}
+
+#project-selector {
+    flex-basis: 40%;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#stripe {
+    height: 100vh;
+    width: 250px;
+    position: absolute;
+    background-color: #ED7260;
+
+    z-index: -1;
+
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+#project-selector .btn {
+    height: 66px;
+    width: 66px;
+    border-radius: 33px;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.3);
+
+    position: relative;
+
+    transition: transform 0.1s ease-in-out;
+}
+
+#project-selector .btn::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 15px;
+    background-color: white;
+    border-radius: 3px;
+    transform: rotateZ(45deg);
+    left: calc(50% - 3px);
+    top: calc(50% - 2px);
+}
+
+#project-selector .btn::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 15px;
+    background-color: white;
+    border-radius: 3px;
+    transform: rotateZ(-45deg);
+    left: calc(50% - 12px);
+    top: calc(50% - 2px);
+}
+
+#project-selector .btn.next::before {
+    left: calc(50% - 12px);
+    top: calc(50% + 1px);
+}
+
+#project-selector .btn.next::after {
+    left: calc(50% - 3px);
+    top: calc(50% + 1px);
+}
+
+#project-selector .btn:hover {
+    transform: scale(1.1);
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project .description .header {
+    margin-bottom: 30px;
+}
+
+.project .description .header .title {
+    font-size: 40px;
+    margin: 0;
+}
+
+.project .description .header .subtitle {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+    margin: 0;
 }
