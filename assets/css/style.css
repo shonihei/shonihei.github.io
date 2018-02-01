@@ -36,21 +36,20 @@ body {
     color: var(--font-primary);
 }
 
-#projects {
+#projects-container {
     height: 100vh;
     width: 100vw;
     display: flex;
 }
 
-.thumbnail {
+.thumbnail-container {
     margin: 60px 0;
     box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.3);
 }
 
-.dummy {
+.thumbnail-container .thumbnail {
     height: 225px;
     width: 300px;
-    background-color:rgb(180, 180, 180);
 }
 
 #project-selector {
@@ -129,13 +128,15 @@ body {
 
 .project {
     flex: 1;
+    padding-left: 50px;
+    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
 .project .description .header {
     margin-bottom: 50px;
+    position: relative;
 }
 
 .project .description .header .title {
