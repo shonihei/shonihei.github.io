@@ -3,12 +3,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>  
-    <script src="./assets/js/index.js"></script>
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text" rel="stylesheet">
+    <link href="./assets/css/jquery.fullpage.min.css"></link>
+    <script src="./assets/js/jquery.fullpage.min.js"></script>
 	<link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/index.js"></script>
 	<title>Hi. I'm Sho</title>
 </head>
 <body>
@@ -29,66 +30,96 @@
             <div class="next btn"></div>
         </div>
         <div id="projects">
-            <div class="project">
-                    <div class="description">
-                        <div class="header">
-                            <h3 class="title">Banurnur</h3>
-                            <h5 class="subtitle">Social website designed for Computer Science students to discover project ideas.</h5>
-                        </div>
-                        <div class="body">
-                            <p class="text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a nisi semper, maximus tellus sed, gravida elit. Donec sollicitudin tempus erat, vel rutrum lacus finibus a. Curabitur eros dolor, egestas ut massa ut, efficitur malesuada augue. Vivamus cursus magna nec egestas lobortis. Aliquam tempor pulvinar dolor vel tincidunt. Maecenas tempor velit in augue tristique facilisis. Ut sed varius mi. Sed pharetra ut mi id bibendum.<br><br>Proin ac semper est, a blandit nisi. Nunc gravida enim leo, sit amet placerat leo eleifend eget. Etiam est justo, mattis non blandit a, interdum facilisis metus. Praesent eu velit volutpat, placerat dolor at, semper nibh. Morbi ipsum ligula, aliquet lobortis odio porttitor, sollicitudin pulvinar ligula. 
-                            </p>
-                            <div class="stack">
-                                <div class="type">
-                                    <div class="label-container">
-                                        <h5 class="label">Backend</h5>
-                                    </div>
-                                    <a class="tech" href="https://www.djangoproject.com/"><i class="django devicon-django-plain"></i></a>
-                                    <a class="tech" href="https://www.postgresql.org/"><i class="postgres devicon-postgresql-plain-wordmark"></i></a>
+            <div class="section project">
+                <div class="description">
+                    <div class="header">
+                        <h3 class="title">Antzer</h3>
+                        <h5 class="subtitle">A tool built for students to find the most optimal academic schedule based on user's habits</h5>
+                    </div>
+                    <div class="body">
+                        <p class="text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a nisi semper, maximus tellus sed, gravida elit. Donec sollicitudin tempus erat, vel rutrum lacus finibus a. Curabitur eros dolor, egestas ut massa ut, efficitur malesuada augue. Vivamus cursus magna nec egestas lobortis. Aliquam tempor pulvinar dolor vel tincidunt. Maecenas tempor velit in augue tristique facilisis. Ut sed varius mi. Sed pharetra ut mi id bibendum.<br><br>Proin ac semper est, a blandit nisi. Nunc gravida enim leo, sit amet placerat leo eleifend eget. Etiam est justo, mattis non blandit a, interdum facilisis metus. Praesent eu velit volutpat, placerat dolor at, semper nibh. Morbi ipsum ligula, aliquet lobortis odio porttitor, sollicitudin pulvinar ligula. 
+                        </p>
+                        <div class="stack">
+                            <div class="type">
+                                <div class="label-container">
+                                    <h5 class="label">Backend</h5>
                                 </div>
-                                <div class="type">
-                                    <div class="label-container">
-                                        <h5 class="label">Frontend</h5>
-                                    </div>
-                                    <a class="tech" href="https://www.w3.org/html/"><i class="devicon-html5-plain-wordmark"></i></a>
-                                    <a class="tech" href="https://www.w3.org/Style/CSS/"><i class="devicon-css3-plain-wordmark"></i></a>
-                                    <a class="tech" href="https://www.javascript.com/"><i class="devicon-javascript-plain"></i></a>
+                                <a class="tech" href="https://www.djangoproject.com/"><i class="django devicon-django-plain"></i></a>
+                                <a class="tech" href="https://www.postgresql.org/"><i class="postgres devicon-postgresql-plain-wordmark"></i></a>
+                            </div>
+                            <div class="type">
+                                <div class="label-container">
+                                    <h5 class="label">Frontend</h5>
                                 </div>
+                                <a class="tech" href="https://www.w3.org/html/"><i class="devicon-html5-plain-wordmark"></i></a>
+                                <a class="tech" href="https://www.w3.org/Style/CSS/"><i class="devicon-css3-plain-wordmark"></i></a>
+                                <a class="tech" href="https://www.javascript.com/"><i class="devicon-javascript-plain"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="project">
-                    <div class="description">
-                        <div class="header">
-                            <h3 class="title">The BPS Algo Competition</h3>
-                            <h5 class="subtitle">Algorithm contest website to help the Boston Public School system.</h5>
-                        </div>
-                        <div class="body">
-                            <p class="text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a nisi semper, maximus tellus sed, gravida elit. Donec sollicitudin tempus erat, vel rutrum lacus finibus a. Curabitur eros dolor, egestas ut massa ut, efficitur malesuada augue. Vivamus cursus magna nec egestas lobortis. Aliquam tempor pulvinar dolor vel tincidunt. Maecenas tempor velit in augue tristique facilisis. Ut sed varius mi. Sed pharetra ut mi id bibendum.<br><br>Proin ac semper est, a blandit nisi. Nunc gravida enim leo, sit amet placerat leo eleifend eget. Etiam est justo, mattis non blandit a, interdum facilisis metus. Praesent eu velit volutpat, placerat dolor at, semper nibh. Morbi ipsum ligula, aliquet lobortis odio porttitor, sollicitudin pulvinar ligula. 
-                            </p>
-                            <div class="stack">
-                                <div class="type">
-                                    <div class="label-container">
-                                        <h5 class="label">Backend</h5>
-                                    </div>
-                                    <a class="tech" href="https://www.djangoproject.com/"><i class="django devicon-django-plain"></i></a>
-                                    <a class="tech" href="https://www.postgresql.org/"><i class="postgres devicon-postgresql-plain-wordmark"></i></a>
+            </div>
+            <div class="section project">
+                <div class="description">
+                    <div class="header">
+                        <h3 class="title">Banurnur</h3>
+                        <h5 class="subtitle">Social website designed for Computer Science students to discover project ideas.</h5>
+                    </div>
+                    <div class="body">
+                        <p class="text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a nisi semper, maximus tellus sed, gravida elit. Donec sollicitudin tempus erat, vel rutrum lacus finibus a. Curabitur eros dolor, egestas ut massa ut, efficitur malesuada augue. Vivamus cursus magna nec egestas lobortis. Aliquam tempor pulvinar dolor vel tincidunt. Maecenas tempor velit in augue tristique facilisis. Ut sed varius mi. Sed pharetra ut mi id bibendum.<br><br>Proin ac semper est, a blandit nisi. Nunc gravida enim leo, sit amet placerat leo eleifend eget. Etiam est justo, mattis non blandit a, interdum facilisis metus. Praesent eu velit volutpat, placerat dolor at, semper nibh. Morbi ipsum ligula, aliquet lobortis odio porttitor, sollicitudin pulvinar ligula. 
+                        </p>
+                        <div class="stack">
+                            <div class="type">
+                                <div class="label-container">
+                                    <h5 class="label">Backend</h5>
                                 </div>
-                                <div class="type">
-                                    <div class="label-container">
-                                        <h5 class="label">Frontend</h5>
-                                    </div>
-                                    <a class="tech" href="https://www.w3.org/html/"><i class="devicon-html5-plain-wordmark"></i></a>
-                                    <a class="tech" href="https://www.w3.org/Style/CSS/"><i class="devicon-css3-plain-wordmark"></i></a>
-                                    <a class="tech" href="https://www.javascript.com/"><i class="devicon-javascript-plain"></i></a>
+                                <a class="tech" href="https://www.djangoproject.com/"><i class="django devicon-django-plain"></i></a>
+                                <a class="tech" href="https://www.postgresql.org/"><i class="postgres devicon-postgresql-plain-wordmark"></i></a>
+                            </div>
+                            <div class="type">
+                                <div class="label-container">
+                                    <h5 class="label">Frontend</h5>
                                 </div>
+                                <a class="tech" href="https://www.w3.org/html/"><i class="devicon-html5-plain-wordmark"></i></a>
+                                <a class="tech" href="https://www.w3.org/Style/CSS/"><i class="devicon-css3-plain-wordmark"></i></a>
+                                <a class="tech" href="https://www.javascript.com/"><i class="devicon-javascript-plain"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="section project">
+                <div class="description">
+                    <div class="header">
+                        <h3 class="title">The BPS Algo Competition</h3>
+                        <h5 class="subtitle">Algorithm contest website to help the Boston Public School system.</h5>
+                    </div>
+                    <div class="body">
+                        <p class="text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a nisi semper, maximus tellus sed, gravida elit. Donec sollicitudin tempus erat, vel rutrum lacus finibus a. Curabitur eros dolor, egestas ut massa ut, efficitur malesuada augue. Vivamus cursus magna nec egestas lobortis. Aliquam tempor pulvinar dolor vel tincidunt. Maecenas tempor velit in augue tristique facilisis. Ut sed varius mi. Sed pharetra ut mi id bibendum.<br><br>Proin ac semper est, a blandit nisi. Nunc gravida enim leo, sit amet placerat leo eleifend eget. Etiam est justo, mattis non blandit a, interdum facilisis metus. Praesent eu velit volutpat, placerat dolor at, semper nibh. Morbi ipsum ligula, aliquet lobortis odio porttitor, sollicitudin pulvinar ligula. 
+                        </p>
+                        <div class="stack">
+                            <div class="type">
+                                <div class="label-container">
+                                    <h5 class="label">Backend</h5>
+                                </div>
+                                <a class="tech" href="https://www.djangoproject.com/"><i class="django devicon-django-plain"></i></a>
+                                <a class="tech" href="https://www.postgresql.org/"><i class="postgres devicon-postgresql-plain-wordmark"></i></a>
+                            </div>
+                            <div class="type">
+                                <div class="label-container">
+                                    <h5 class="label">Frontend</h5>
+                                </div>
+                                <a class="tech" href="https://www.w3.org/html/"><i class="devicon-html5-plain-wordmark"></i></a>
+                                <a class="tech" href="https://www.w3.org/Style/CSS/"><i class="devicon-css3-plain-wordmark"></i></a>
+                                <a class="tech" href="https://www.javascript.com/"><i class="devicon-javascript-plain"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
