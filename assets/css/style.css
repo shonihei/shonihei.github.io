@@ -84,12 +84,12 @@ body {
     height: 40px;
     width: 40px;
     border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.3);
     cursor: pointer;
     position: relative;
 
-    transition: transform 0.1s ease-in-out;
+    transition: transform 0.5s cubic-bezier(0.5,-0.5,0,3), opacity 0.5s ease-in-out;
 }
 
 #project-selector .btn::before {
@@ -116,6 +116,12 @@ body {
     top: calc(50% - 2px);
 }
 
+#project-selector .btn.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+
 #project-selector .btn.next::before {
     left: calc(50% - 8px);
     top: calc(50% + 1px);
@@ -127,7 +133,7 @@ body {
 }
 
 #project-selector .btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 #projects {
