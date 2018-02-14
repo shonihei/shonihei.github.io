@@ -1,6 +1,7 @@
 :root {
     --font-primary: rgba(63, 63, 63, 1);
     --font-secondary: rgba(63, 63, 63, 0.6);
+    --elastic-easing: cubic-bezier(0.75,-0.5,0,1.2);
 }
 
 body {
@@ -218,7 +219,7 @@ body {
     margin: 10px 20px;
     text-decoration: none;
     color: var(--font-secondary);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .project .description .body .stack .type .tech:hover {
