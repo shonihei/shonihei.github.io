@@ -52,4 +52,7 @@ const onStateChange = (state, props) => {
     } else {
         props.nextBtn.classList.remove('disabled')
     }
+
+    const progress = (state.curSection / state.numProjects) * 100;
+    document.documentElement.style.setProperty(`--progress`, progress + 'vh');
 }
