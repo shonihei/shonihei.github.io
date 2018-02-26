@@ -1,60 +1,58 @@
-function openInNewTab(url) {
-    var win = window.open(url, '_blank');
-    win.focus();
+const state = {
+    curSection: 1,
 }
 
-$(document).ready(function(){
-    // Add smooth scrolling to all links in navbar + footer link
-    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-        if (this.hash !== "") {
-            // Make sure this.hash has a value before overriding default behavior
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 900, function(){
-
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-            });
-        } // End if
-    });
-
-    $("#contact-btn").click(function() {
-        $('html,body').animate({
-            scrollTop: $("#contact").offset().top},
-            900);
-    });
-
-    var scroll_pos = 0;
-    var jumbotronHeight = $(".jumbotron").outerHeight();
-    var navbarHeight = $(".navbar").height();
-    var colorChanged = false;
-    $(document).scroll(function() {
-        scroll_pos = $(this).scrollTop();
-        if(scroll_pos > jumbotronHeight - navbarHeight) {
-            if (!colorChanged) {
-                $(".navbar").animate({
-                    backgroundColor : "#545454",
-                    color : "#545454"
-                }, 700);
-
-                colorChanged = true;
-            }
-        } else {
-            if (colorChanged) {
-                $(".navbar").animate({
-                    backgroundColor : "transparent",
-                    color : "#545454"
-                }, 700);
-                colorChanged = false;
-            }
+window.onload = () => {
+    $('#projects').fullpage({
+        css3: true,
+        scrollingSpeed: 800,
+        easingcss3: 'cubic-bezier(0.75,-0.5,0,1.2)',
+        onLeave: (index, nextIndex, direction) => {
+            updateState(state, {curSection: nextIndex}, props)
         }
-    });
-})
+    })
+    const props = {}
+    props.prevBtn = document.getElementById("prev-project-btn")
+    props.nextBtn = document.getElementById("next-project-btn")
+    
+    const projects = document.getElementById('projects')
+    let numOfProjects = 0
+    for (let child of projects.childNodes) {
+        if (child.nodeName === "DIV" && 
+            child.classList.contains("section")) numOfProjects++
+    }
+    updateState(state, {numProjects: numOfProjects}, props)
+
+
+    props.prevBtn.addEventListener('click', () => {
+        updateState(state, {curSection: --state.curSection}, props)
+        $.fn.fullpage.moveTo(state.curSection)
+    })
+
+    props.nextBtn.addEventListener('click', () => {
+        updateState(state, {curSection: ++state.curSection}, props)
+        $.fn.fullpage.moveTo(state.curSection)
+    })
+}
+
+const updateState = (prevState, newState, props) => {
+    Object.assign(prevState, newState)
+    onStateChange(state, props)
+}
+
+const onStateChange = (state, props) => {
+    if (state.curSection == 1) {
+        props.prevBtn.classList.add('disabled')
+    } else {
+        props.prevBtn.classList.remove('disabled')
+    }
+
+    if (state.curSection == state.numProjects) {
+        props.nextBtn.classList.add('disabled')
+    } else {
+        props.nextBtn.classList.remove('disabled')
+    }
+
+    const progress = (state.curSection / state.numProjects) * 100;
+    document.documentElement.style.setProperty(`--progress`, progress + 'vh');
+}
